@@ -1,0 +1,25 @@
+<div class="col-md-12">
+  <kendo-grid 
+      [kendoGridBinding]="gridData" 
+      [height]="410"
+      [pageSize]="10"
+      [pageable]="true"
+      [sortable]="true"
+      [filterable]="true">
+    <kendo-grid-column field="ProductID" title="ID" >
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name" >
+    </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price" >
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitsInStock" title="In stock" >
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" title="Discontinued" >
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>
+</div>

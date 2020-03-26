@@ -1,0 +1,8 @@
+<input 
+    type="text" 
+    class="form-control" 
+    [value]="value" 
+    (input)="setNumber($event.target.value)"
+
+/>
+<div *ngIf="numberError" class="text-danger" >Please enter number only</div>
